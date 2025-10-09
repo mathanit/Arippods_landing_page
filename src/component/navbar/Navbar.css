@@ -1,0 +1,84 @@
+.navbarposition{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar{
+    
+    background-color: black;
+    color: rgb(255, 255, 255);
+     display: flex;
+     padding: 10px;
+     justify-content:space-between;
+     align-items: center;
+     animation: navbar .5s linear forwards;
+}
+.navbar .logo img{
+    filter:drop-shadow(0px 0px 5px white);
+}
+.navbar .logo img:hover{
+    filter:drop-shadow(0px 0px 5px #000000);
+}
+.navbar ul{
+    display: flex;
+    margin-right: 10px;
+}
+.navbar ul li{
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+.navbar ul li:hover,a:active{
+    color:red;
+}
+.checkbtn{
+    display: none;
+}
+@keyframes navbar {
+    0%{
+    transform: translateY(-20px);
+    opacity: 0;
+    }
+    100%{
+       transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media screen and (max-width:600px) {
+    
+    .checkbtn{
+    display: block;
+}
+.navbar{
+    position: relative;
+}
+.navbar .menu{
+display: none;
+position: absolute;
+top: 70px;
+animation: lefttoright .5s ease-out forwards;
+width: 100%;
+background-color: rgb(20, 20, 20);
+text-align: center;
+}
+.navbar .menu li:hover,li:active{
+    background-color: antiquewhite;
+    
+    
+}
+.checkbtn:hover .menu{
+    display: block;
+}
+.navbar .menu.active{
+    display: block;
+    
+    
+}
+@keyframes lefttoright {
+    0%{
+        left: -100px;
+    }
+    100%{
+        left:0px
+    }
+}
+}

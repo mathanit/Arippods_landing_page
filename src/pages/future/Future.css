@@ -1,0 +1,128 @@
+.future{
+    
+    background-color: rgb(248, 248, 248);
+    height: 100vh;
+    width: 100%;
+   position: relative;
+ 
+}
+.future-content{
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 50px;
+}
+
+.future .cards{
+    display: flex;
+    overflow: scroll;
+     
+}
+.future .cards::-webkit-scrollbar{
+    display: none;
+}
+.future .cards .future-card{
+    width: 300px;
+    border-radius: 5%;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;  
+    margin:0px 5px;
+    background-color: rgb(0, 0, 0);
+   
+    transition: all 1s ease-in-out;
+    
+}
+.future .cards .future-card:hover{
+    width: 60%;
+}
+.future .future-card .card-text {
+    position: absolute;
+    color: #f0ffff;
+    top: 10px;
+    left: 20px;
+    border-radius: 5%;
+    width: 300px;
+}
+.future .future-card .card-text h1{
+    color: #ffffff;
+font-size: 1em;
+font-weight: bold;
+position: absolute;
+padding: 5px 10px; 
+z-index: 1;
+}
+.future .future-card .card-text p{
+   color: aliceblue;
+    position: absolute;
+    top:50px;
+    padding: 2px;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 300px;
+    z-index: 2;
+}
+
+.future .cards .future-card .card-image img{
+    border-radius: 5%;
+    height: 500px;
+    width: 500px;
+    z-index: 0;
+   
+    transition: all linear 1s;
+   
+}
+/* .future .cards .future-card .card-image img:hover{
+    transform: scale(1.5);
+} */
+ .cards .alt{
+    position: absolute;
+    color: aliceblue;
+    top: 10px;
+    left: 510px;
+    font-size: 2rem;
+    transition: all 1s ease-in;
+ }
+
+  @keyframes anima {
+        0%{
+            transform: rotateY(-90);
+        }
+        100%{
+            transform: rotateY(0);
+        }
+    }
+@media screen and (max-width:600px) {
+    .future{
+        width: 100%;
+        height: 100%;
+        animation: anima 1s linear forwards;
+        animation-timeline: view();
+        animation-range:entry 0 cover 50%;
+    }
+    .future .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+    }
+   
+     .future .cards .future-card {
+        width: 90%;
+        transition: all 3s ease-in 1s;
+    }
+     .future .cards .future-card:hover {
+        width: 90%;
+        height: 650px;
+
+    }
+    .cards .alt{
+    text-align: center;
+    top: 520px;
+    left: 10px;
+    font-size: 1rem;
+   
+ } 
+ 
+}
